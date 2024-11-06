@@ -1,0 +1,9 @@
+{
+	"name": "adf-damg7370-agash",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c648aab1-db4e-4c1d-9d4a-4ba63e21674c",
+		"tenantId": "a8eec281-aaa3-4dae-ac9b-9a398b9215e7"
+	}
+}
