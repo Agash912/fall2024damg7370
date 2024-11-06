@@ -1,0 +1,10 @@
+{
+	"name": "ls_stgdamg7370agash",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stgdamg7370agash.dfs.core.windows.net/"
+		}
+	}
+}
