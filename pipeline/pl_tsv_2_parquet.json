@@ -5,6 +5,8 @@
 			{
 				"name": "Copy_2_Silver_As_Parquet",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.01:00:00",
@@ -144,6 +146,8 @@
 			{
 				"name": "Parquet_2_Stage_Table",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Copy_2_Silver_As_Parquet",
@@ -328,8 +332,8 @@
 						"referenceName": "df_load_breed_dim",
 						"type": "DataFlowReference",
 						"parameters": {
-							"JOB_ID": {
-								"value": "'@{pipeline().RunId}'",
+							"DI_JOB_ID": {
+								"value": "@pipeline().RunId",
 								"type": "Expression"
 							}
 						}
@@ -343,8 +347,9 @@
 			}
 		],
 		"parameters": {
-			"JobID": {
-				"type": "string"
+			"DI_JOB_ID": {
+				"type": "string",
+				"defaultValue": "1"
 			}
 		},
 		"annotations": []
