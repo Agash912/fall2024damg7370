@@ -16,7 +16,8 @@
 						"referenceName": "sourceLocationDim",
 						"type": "DatasetReference"
 					},
-					"name": "sourceLocationDim"
+					"name": "sourceLocationDim",
+					"description": "Import data from ds_geodata"
 				}
 			],
 			"sinks": [
