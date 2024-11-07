@@ -9,6 +9,9 @@
 			"FileName": {
 				"type": "string",
 				"defaultValue": "Seattle_Pet_Licenses.tsv"
+			},
+			"Directory": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -18,6 +21,10 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": {
 					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().Directory",
 					"type": "Expression"
 				},
 				"fileSystem": "bronze"
