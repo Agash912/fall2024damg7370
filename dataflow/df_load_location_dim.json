@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "ds_snowflake_stg_spl",
+						"referenceName": "ds_geodata",
 						"type": "DatasetReference"
 					},
 					"name": "sourcesnowflakestage"
@@ -44,20 +44,20 @@
 				"     DI_JOB_ID as string",
 				"}",
 				"source(output(",
-				"          LICENSE_ISSUE_DATE as string,",
-				"          LICENSE_NUMBER as string,",
-				"          ANIMAL_S_NAME as string,",
-				"          SPECIES as string,",
-				"          PRIMARY_BREED as string,",
-				"          SECONDARY_BREED as string,",
-				"          ZIP_CODE as string,",
-				"          DI_CREATED_DATE as string,",
-				"          DI_JOB_ID as string",
+				"          state_fips as short,",
+				"          state as string,",
+				"          state_abbr as string,",
+				"          zipcode as string,",
+				"          county as string,",
+				"          city as string",
 				"     ),",
 				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
-				"     format: 'table') ~> sourcesnowflakestage",
-				"source(allowSchemaDrift: false,",
+				"     ignoreNoFilesFound: false) ~> sourcesnowflakestage",
+				"source(output(",
+				"          MAXLOCATIONSK as decimal(10,0)",
+				"     ),",
+				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
 				"     query: 'SELECT NVL(MAX(LOCATION_SK),0) as MaxLOCATIONSK FROM EDW.LOCATION_DIM',",
 				"     format: 'query') ~> sourceLocationDim",
@@ -91,7 +91,12 @@
 				"     skipDuplicateMapOutputs: true,",
 				"     stageInsert: true,",
 				"     mapColumn(",
-				"          LOCATION_SK",
+				"          LOCATION_SK,",
+				"          ZIP = zipcode,",
+				"          CITY = city,",
+				"          STATE = state,",
+				"          DATE_TO_WAREHOUSE = DI_CREATED_DT,",
+				"          DI_JOBID = DI_JOB_ID",
 				"     )) ~> sink1"
 			]
 		}
