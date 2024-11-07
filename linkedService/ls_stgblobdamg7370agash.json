@@ -1,0 +1,11 @@
+{
+	"name": "ls_stgblobdamg7370agash",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://stgdamg7370agashblob.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}
