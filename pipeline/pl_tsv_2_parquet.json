@@ -199,7 +199,8 @@
 						"linkedServiceName": {
 							"referenceName": "ls_stgblobdamg7370agash",
 							"type": "LinkedServiceReference"
-						}
+						},
+						"path": "snowstaging"
 					},
 					"translator": {
 						"type": "TabularTranslator",
