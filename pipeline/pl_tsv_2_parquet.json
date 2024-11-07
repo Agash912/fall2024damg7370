@@ -330,13 +330,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "df_load_breed_dim",
-						"type": "DataFlowReference",
-						"parameters": {
-							"DI_JOB_ID": {
-								"value": "@pipeline().RunId",
-								"type": "Expression"
-							}
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
@@ -346,12 +340,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"DI_JOB_ID": {
-				"type": "string",
-				"defaultValue": "1"
-			}
-		},
 		"annotations": []
 	}
 }
