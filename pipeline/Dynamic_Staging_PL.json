@@ -190,7 +190,13 @@
 							"outputs": [
 								{
 									"referenceName": "ds_Parquet_Staging",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FileName": {
+											"value": "@concat(\n    item().table_name,'.parquet'\n)",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
