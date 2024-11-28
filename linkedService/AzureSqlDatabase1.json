@@ -6,12 +6,12 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"server": "damg7370-agash.database.windows.net",
-			"database": "damg7370",
+			"database": "sakila",
 			"encrypt": "mandatory",
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "damg7370-admin",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEREN0YyODE3LTZCMUEtNDZDOC05NDI1LUM0RTU1RjBGNEVGQV8xMjM4YmI4NC1lODg0LTRiZjUtYjJmZC0zMDgyN2IzMzU3YjEiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEREN0YyODE3LTZCMUEtNDZDOC05NDI1LUM0RTU1RjBGNEVGQV9lODljYjNlOS1jMjgyLTQ1NTgtOWM3MC1hYzA2MmRkNzJhMGIiDQp9"
 		}
 	}
 }
