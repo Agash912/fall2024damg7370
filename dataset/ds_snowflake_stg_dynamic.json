@@ -5,6 +5,11 @@
 			"referenceName": "ls_snowlfake_demo1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"table_name_snowflake": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "SnowflakeV2Table",
 		"schema": [
@@ -47,7 +52,10 @@
 		],
 		"typeProperties": {
 			"schema": "STAGE",
-			"table": ""
+			"table": {
+				"value": "@dataset().table_name_snowflake",
+				"type": "Expression"
+			}
 		}
 	}
 }
