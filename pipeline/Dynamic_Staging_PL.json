@@ -168,8 +168,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_reaD_parquet",
-									"type": "DatasetReference"
+									"referenceName": "ds_Parquet_Staging",
+									"type": "DatasetReference",
+									"parameters": {
+										"FileName": "@concat(     item().table_name,'.parquet' )"
+									}
 								}
 							],
 							"outputs": [
