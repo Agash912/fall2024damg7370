@@ -193,7 +193,10 @@
 									"referenceName": "ds_snowflake_stg_dynamic",
 									"type": "DatasetReference",
 									"parameters": {
-										"table_name_snowflake": "@item().table_name"
+										"table_name_snowflake": {
+											"value": "@toUpper(item().table_name)",
+											"type": "Expression"
+										}
 									}
 								}
 							]
