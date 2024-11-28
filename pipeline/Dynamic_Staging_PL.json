@@ -75,11 +75,7 @@
 								"sink": {
 									"type": "ParquetSink",
 									"storeSettings": {
-										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": {
-											"value": "@item()",
-											"type": "Expression"
-										}
+										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
 										"type": "ParquetWriteSettings"
@@ -194,13 +190,7 @@
 							"outputs": [
 								{
 									"referenceName": "ds_Parquet_Staging",
-									"type": "DatasetReference",
-									"parameters": {
-										"FileName": {
-											"value": "@concat(\n    item().table_name,'.parquet'\n)",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}
