@@ -142,22 +142,6 @@
 							"typeProperties": {
 								"source": {
 									"type": "ParquetSource",
-									"additionalColumns": [
-										{
-											"name": "DI_Job_ID",
-											"value": {
-												"value": "@pipeline().RunId",
-												"type": "Expression"
-											}
-										},
-										{
-											"name": "DI_Created_Dt",
-											"value": {
-												"value": "@utcNow()",
-												"type": "Expression"
-											}
-										}
-									],
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
